@@ -94,7 +94,7 @@ unset https_proxy && unset HTTPS_PROXY
 
 ##### 16、electron-ssr使用
 
-链接: https://pan.baidu.com/s/1IKw_fla0tKGhVYWXlIjS1Q  密码: ok0j
+https://cloud.189.cn/t/MRzaYzEJbQbm
 双击安装后要进行自动下载（用于更新），代理那里自动手动都可以，chrome打开就可以用，火狐需要设置
 
 ```
