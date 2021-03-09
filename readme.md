@@ -215,5 +215,34 @@ ctrl加逗号，打开设置，搜索font family，将原内容修改为'monospa
 ```
 sudo apt install tigervnc-viewer 
 ```
+##### 33、安装zed2，astra和kinect相机
+
+```
+cd ~/catkin_ws/src/ 
+git clone https://github.com/stereolabs/zed-ros-wrapper.git
+cd ~/catkin_ws
+catkin_make -DCMAKE_BUILD_TYPE=Release
+echo source $(pwd)/devel/setup.bash >> ~/.bashrc
+source ~/.bashrc
+roslaunch zed_wrapper zed.launch
+```
+
+```
+cd ~/catkin_ws/src
+git clone https://github.com/orbbec/ros_astra_camera
+roscd astra_camera
+./scripts/create_udev_rules
+cd ~/catkin_ws
+catkin_make --pkg astra_camera
+roslaunch astra_camera astra.launch
+```
+
+```
+sudo apt-get install ros-melodic-freenect-*
+git clone https://github.com/avin2/SensorKinect.git
+sudo ./install.sh 
+roslaunch mrobot_bringup freenect.launch 
+```
+
 
 
